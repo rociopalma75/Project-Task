@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import {montserrat, lusitana} from "../fonts"
 import Link from "next/link";
 
 
@@ -8,76 +6,31 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <div className={styles.presentacion}>
+          <h4>Presentación</h4>
+          <p>
+            Soy Emilce Rocio Palma, estudiante de Ingeniería en Sistemas apasionada por el desarrollo web, APIs y pruebas. Actualmente, en CODES SA, implemento operaciones ABM integrando Vue.js y Vuetify con .NET, utilizando Entity Framework y trabajando colaborativamente con GIT. Siempre busco aprender y contribuir con soluciones eficientes, aportando resiliencia y organización a mi equipo.
+          </p>
+        </div>
+        <a href="/CV_Rocio-Palma.pdf" target="_blank" rel="noopener noreferrer">
+          Ver mi CV
+        </a>
         <div className={styles.ctas}>
           <a
             className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://github.com/rociopalma75/Project-Task"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20} //requerido 
-              height={20} //requerido
-            />
-            Deploy now
+            Ir al repositorio de Github 
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          <Link
+            className={styles.primary}
+            href="/tasks"
+          >Ir a Tareas</Link>
+
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

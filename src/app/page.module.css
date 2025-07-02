@@ -30,31 +30,11 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 32px;
   grid-row-start: 2;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
 
 .ctas {
   display: flex;
@@ -92,20 +72,23 @@ a.secondary {
   min-width: 158px;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
+.presentacion{
+  width: 60%;
 
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
+  h4{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-geist-mono);
+    text-align: center;
+  }
+  p{
+    margin: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-geist-sans);
+    text-align: center;
+  }
 }
 
 /* Enable hover only on non-touch devices */
@@ -135,11 +118,6 @@ a.secondary {
   .main {
     align-items: center;
   }
-
-  .main ol {
-    text-align: center;
-  }
-
   .ctas {
     flex-direction: column;
   }
@@ -152,12 +130,6 @@ a.secondary {
 
   a.secondary {
     min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 }
 
