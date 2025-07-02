@@ -1,0 +1,243 @@
+.form {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 70vw;
+  margin:auto;
+  &:hover{
+    border-color: #d1d5db;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.form input.disabled {
+  background: #aeb1b4 !important;
+  color: #6b7280 !important;
+  cursor: not-allowed !important;
+}
+
+
+.form .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.form .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.form .status {
+  display: flex;
+  align-items: center;
+}
+
+.form .statusBadge {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &.completed{
+    background: #d1fae5;
+    color: #065f46;
+    border: 2px solid #10b981;
+  }
+
+  &.pending {
+    background: #fef3c7;
+    color: #92400e;
+    border: 2px solid #f59e0b;
+  }
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+.form .fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &.half{
+    flex: 1;
+  }
+}
+
+.form label{
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form input {
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+  }
+}
+
+.form textarea {
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #f9fafb;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+  }
+}
+
+.form .checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+
+  &.disabled{
+    background: #aeb1b4 !important;
+    color: #6b7280 !important;
+    cursor: not-allowed !important;
+  }
+}
+
+
+.form .checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.form .checkboxLabel {
+  font-size: 1rem;
+  color: #374151;
+  cursor: pointer;
+  margin: 0;
+}
+
+
+.form .fieldGroup .error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &::before {
+    content: "⚠";
+    font-size: 0.9rem;
+  }
+}
+
+.form .helpText {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+
+.form .actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 2px solid #f3f4f6;
+}
+
+.form button {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid transparent;
+  min-width: 140px;
+  justify-content: center;
+
+  &.secondary {
+    background: #f3f4f6;
+    color: #374151;
+    border-color: #d1d5db;
+
+    &:hover {
+      background: #e5e7eb;
+      border-color: #9ca3af;
+    }
+
+  }
+  
+  &.center{
+    margin: 10px auto;
+  }
+
+  &.primary {
+    background: #3b82f6;
+    color: white;
+    border-color: #2563eb;
+
+    &:hover{
+      background: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    }
+  }
+}
+
+.form .spinner{
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}

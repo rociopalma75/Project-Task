@@ -1,0 +1,160 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.modalIcon {
+  margin: 0 auto 24px;
+  width: 64px;
+  height: 64px;
+  background: #fef2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal.center {
+  padding: 32px;
+  text-align: center;
+}
+
+.modal .header{
+  margin-bottom: 24px;
+}
+
+.modal .title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.modal .subtitle{
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.modal .info{
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 32px;
+  text-align: left;
+
+  .preview{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .id{
+          font-family: "Courier New", monospace;
+          font-weight: 600;
+          color: #374151;
+          font-size: 0.875rem;
+      }
+
+      .title{
+          font-weight: 600;
+          color: #1f2937;
+          font-size: 1.1rem;
+      }
+
+      .description{
+          color: #6b7280;
+          font-size: 0.9rem;
+          line-height: 1.5;
+      }
+  }
+}
+
+.modal .actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+    button {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid transparent;
+    
+      &.cancelar{
+          background: #f3f4f6;
+          color: #374151;
+          border-color: #d1d5db;
+
+          &:hover{
+              background: #e5e7eb;
+              border-color: #9ca3af;
+          }
+      }
+
+      &.delete{
+          background: #ef4444;
+          color: white;
+          border-color: #dc2626;
+
+          &:hover{
+              background: #dc2626;
+              transform: translateY(-1px);
+              box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+          }
+
+      }
+      
+    
+    
+    }
+
+}
+
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

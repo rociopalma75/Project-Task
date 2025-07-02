@@ -1,0 +1,24 @@
+### Obtener tareas
+GET http://localhost:3000/api/tasks
+### Obtiene una tarea
+GET http://localhost:3000/api/tasks/8
+### Actualizar
+PUT http://localhost:3000/api/tasks/8
+Content-Type: application/json
+
+{
+  "title": "Tarea actualizada desde .http",
+  "description": "Esto es una prueba de PUT usando REST Client",
+  "completed": true,
+  "createdAt": "2025-06-29T10:00:00"
+}
+### Crear nueva tarea
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Tarea de prueba",
+  "description": "Creada desde REST Client",
+  "completed": false,
+  "createdAt": "2025-06-29T10:00:00"
+}
