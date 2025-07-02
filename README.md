@@ -1,5 +1,13 @@
 ## Link de la app en produccion 
 https://prueba-6l6at5dp0-rocios-projects-7e71f73e.vercel.app/
+
+## Vistas
+![imagen](https://github.com/user-attachments/assets/89990f1f-e186-49d0-b325-90b7eef6ec69)
+![imagen](https://github.com/user-attachments/assets/a94a505e-9827-4cd1-8b33-00124751c669)
+![imagen](https://github.com/user-attachments/assets/6475b831-54e1-4380-820d-de597837edac)
+![imagen](https://github.com/user-attachments/assets/7c329dae-bc93-4dd8-b2dd-1a4f6fa64ddf)
+
+
 ## Getting Started
 
 First, run the development server:
